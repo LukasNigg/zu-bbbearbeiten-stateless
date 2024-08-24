@@ -19,3 +19,9 @@ def add():
 def update(index):
     helper.update(index)
     return redirect(url_for("index"))
+
+
+@app.route('/delete/<int:index>')
+def delete(index):
+    helper.delete(index)
+    return redirect(url_for("index"))
